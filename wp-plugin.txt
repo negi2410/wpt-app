@@ -1,0 +1,2 @@
+<!-- Chat Widget -->
+<script src="http://0.0.0.0/chat-widget.js"></script>

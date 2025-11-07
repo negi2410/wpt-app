@@ -1,0 +1,232 @@
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+
+   .admin-chat-container {
+       display: flex;
+       height: 80vh;
+   }
+
+   /* Sessions Sidebar */
+   .sessions-sidebar {
+       width: 350px;
+       background: white;
+       border-right: 1px solid #e0e0e0;
+       display: flex;
+       flex-direction: column;
+   }
+
+   .sidebar-header {
+       padding: 20px;
+       background: #007bff;
+       color: white;
+   }
+
+   .sidebar-header h1 {
+       font-size: 18px;
+       font-weight: 600;
+   }
+
+   .sessions-list {
+       flex: 1;
+       overflow-y: auto;
+   }
+
+   .session-item {
+       padding: 15px;
+       border-bottom: 1px solid #f0f0f0;
+       cursor: pointer;
+       transition: background 0.2s;
+   }
+
+   .session-item:hover {
+       background: #f8f9fa;
+   }
+
+   .session-item.active {
+       background: #e3f2fd;
+       border-left: 4px solid #007bff;
+   }
+
+   .session-customer {
+       font-weight: 600;
+       margin-bottom: 5px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+
+   .session-email {
+       color: #666;
+       font-size: 13px;
+       margin-bottom: 5px;
+   }
+
+   .session-meta {
+       display: flex;
+       justify-content: space-between;
+       font-size: 12px;
+       color: #888;
+   }
+
+   .unread-badge {
+       background: #dc3545;
+       color: white;
+       border-radius: 10px;
+       padding: 2px 8px;
+       font-size: 11px;
+       font-weight: 600;
+   }
+
+   /* Chat Area */
+   .chat-area {
+       flex: 1;
+       display: flex;
+       flex-direction: column;
+   }
+
+   .chat-header {
+       padding: 20px;
+       background: white;
+       border-bottom: 1px solid #e0e0e0;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+
+   .chat-customer-info h2 {
+       font-size: 18px;
+       margin-bottom: 5px;
+   }
+
+   .chat-customer-info .email {
+       color: #666;
+       font-size: 14px;
+   }
+
+   .chat-actions button {
+       background: #dc3545;
+       color: white;
+       border: none;
+       padding: 8px 15px;
+       border-radius: 6px;
+       cursor: pointer;
+       font-size: 14px;
+   }
+
+   .chat-actions button:hover {
+       background: #c82333;
+   }
+
+   .messages-container {
+       flex: 1;
+       padding: 20px;
+       overflow-y: auto;
+       background: #f8f9fa;
+   }
+
+   .message {
+       margin-bottom: 15px;
+       display: flex;
+   }
+
+   .message.admin {
+       justify-content: flex-end;
+   }
+
+   .message.customer {
+       justify-content: flex-start;
+   }
+
+   .message-bubble {
+       max-width: 70%;
+       padding: 12px 16px;
+       border-radius: 18px;
+       word-wrap: break-word;
+   }
+
+   .message.admin .message-bubble {
+       background: #007bff;
+       color: white;
+       border-bottom-right-radius: 4px;
+   }
+
+   .message.customer .message-bubble {
+       background: white;
+       color: #333;
+       border: 1px solid #e0e0e0;
+       border-bottom-left-radius: 4px;
+   }
+
+   .message-time {
+       font-size: 12px;
+       color: #666;
+       margin-top: 5px;
+   }
+
+   .message.admin .message-time {
+       text-align: right;
+   }
+
+   .no-session-selected {
+       flex: 1;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: #666;
+       font-size: 18px;
+   }
+
+   .chat-input-area {
+       padding: 20px;
+       background: white;
+       border-top: 1px solid #e0e0e0;
+   }
+
+   .message-input-group {
+       display: flex;
+       gap: 10px;
+   }
+
+   #adminMessageInput {
+       flex: 1;
+       padding: 12px;
+       border: 1px solid #ddd;
+       border-radius: 6px;
+       font-size: 14px;
+       resize: none;
+       height: 60px;
+   }
+
+   #btnAdminSend {
+       background: #007bff;
+       color: white;
+       border: none;
+       padding: 0 20px;
+       border-radius: 6px;
+       cursor: pointer;
+       font-size: 14px;
+   }
+
+   #btnAdminSend:hover:not(:disabled) {
+       background: #0056b3;
+   }
+
+   #btnAdminSend:disabled {
+       background: #6c757d;
+       cursor: not-allowed;
+   }
+
+   .loading {
+       text-align: center;
+       color: #666;
+       padding: 20px;
+   }
+
+   .empty-state {
+       text-align: center;
+       color: #666;
+       padding: 40px 20px;
+   }
